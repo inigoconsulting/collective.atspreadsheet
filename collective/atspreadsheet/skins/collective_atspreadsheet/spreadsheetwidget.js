@@ -5,8 +5,13 @@ var JQSHEET_ACTIVATED=false;
 var initJQSheet = function(objid,stitle,editable){
   jQuery(document).ready(function() {
     key = objid+"-jspreadsheet"
+
+    if (typeof editable == "undefined"){
+       editable=true;
+    }
+
     if (!JQSHEET_ACTIVATED){
-      if (editable != true){
+      if (editable == true){
         jQuery(key).sheet({
             title:stitle,
             editable:true,
