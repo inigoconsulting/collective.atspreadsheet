@@ -11,6 +11,7 @@
     <!-- TextArea Widgets -->
 
     <metal:view_macro define-macro="view">
+
       <!-- this is a hack!! FIXME -->
       <tal:js repeat="js widget/helper_js">
          <script type="text/javascript" charset="iso-8859-1"
@@ -21,11 +22,12 @@
              tal:attributes="href css"/>
       </tal:css>
       <!-- EOf Hack -->
+
       <script type="text/javascript" 
          tal:content="string:initJQSheet('#${fieldName}','${widget/label}',false)"></script>
       <div tal:attributes="id string:${fieldName}-jspreadsheet">
       <table tal:attributes="title widget/label;"
-          tal:content="structure python:getattr(context,fieldName)">
+          tal:content="structure accessor">
       </table>
       </div>
     </metal:view_macro>
