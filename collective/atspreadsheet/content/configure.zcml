@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="collective.atspreadsheet">
+
+  <!-- configure your content components here -->
+  
+  <!-- -*- extra stuff goes here -*- -->
+  <class class=".spreadsheet.Spreadsheet">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ISpreadsheet"
+        />
+    <require
+        permission="cmf.ModifyPortalContent"
+        set_schema="..interfaces.ISpreadsheet"
+        />
+  </class>
+
+</configure>
