@@ -151,11 +151,32 @@
       </tal:define>
     </metal:define>
 
+    <metal:define define-macro="inline_menu">
+<span id="inlineMenu" style="display:none;">
+                <span>
+                        <a href="#" onclick="jS.controlFactory.addRow(); return false;" title="Add Row" class="toolbar qt-sheet"><img height="16" border="0" width="16" class="icon" alt="Add Row" src="sheet_row_add.png"/></a>
+                        <a href="#" onclick="jS.controlFactory.addRowMulti(); return false;" title="Add Multi-Rows" class="toolbar qt-sheet"><img height="16" border="0" width="16" class="icon" alt="Add Multi-Rows" src="sheet_row_add_multi.png"/></a>
+                        <a href="#" onclick="jS.deleteRow(); return false;" title="Delete Row" class="toolbar qt-sheet"><img height="16" border="0" width="16" class="icon" alt="Delete Row" src="sheet_row_delete.png"/></a>
+                        <a href="#" onclick="jS.controlFactory.addColumn(); return false;" title="Add Column" class="toolbar qt-sheet"><img height="16" border="0" width="16" class="icon" alt="Add Column" src="sheet_col_add.png"/></a>
+                        <a href="#" onclick="jS.controlFactory.addColumnMulti(); return false;" title="Add Multi-Columns" class="toolbar qt-sheet"><img height="16" border="0" width="16" class="icon" alt="Add Multi-Columns" src="sheet_col_add_multi.png"/></a>
+                        <a href="#" onclick="jS.deleteColumn(); return false;" title="Delete Column" class="toolbar qt-sheet"><img height="16" border="0" width="16" class="icon" alt="Delete Column" src="sheet_col_delete.png"/></a>
+                        <a href="#" onclick='jS.appendToFormula("(" + jS.getTdRange() + ")"); return false;' title="Get Cell Range" class="toolbar qt-sheet"><img height="16" border="0" width="16" class="icon" alt="Get Cell Range" src="sheet_get_range.png"/></a>
+                        <a href="#" onclick="jS.calc(jS.i); return false;" title="Refresh Calculations" class="toolbar qt-sheet"><img height="16" border="0" width="16" class="icon" alt="Refresh Calculations" src="arrow_refresh.png"/></a>
+                        <a href="#" onclick="jS.cellFind(); return false;" title="Find" class="toolbar qt-sheet"><img height="16" border="0" width="16" class="icon" alt="Find" src="find.png"/></a>
+                        <a href="#" onclick="jS.cellStyleToggle('styleBold');" title="Bold" class="toolbar qt-inline cellStyleToggle styleBold"><img height="16" border="0" width="16" class="icon" alt="Bold" src="text_bold.png"/></a>
+                        <a href="#" onclick="jS.cellStyleToggle('styleItalics');" title="Italic" class="toolbar qt-inline cellStyleToggle styleItalics"><img height="16" border="0" width="16" class="icon" alt="Italic" src="text_italic.png"/></a>
+                        <a href="#" onclick="jS.cellStyleToggle('styleLineThrough'); return false;" title="Strikethrough" class="toolbar qt-inline cellStyleToggle styleItalics"><img height="16" border="0" width="16" class="icon" alt="Strikethrough" src="text_strikethrough.png"/></a>
+                        <a href="#" onclick="jS.cellStyleToggle('styleCenter'); return false;" title="Align Center" class="toolbar qt-block styleLeft styleRight"><img height="16" border="0" width="16" class="icon" alt="Align Center" src="text_align_center.png"/></a>
+   </span>
+</span>
+    </metal:define>
+
     <metal:define define-macro="edit">
       <metal:use use-macro="field_macro | here/widgets/field/macros/edit">
         <metal:fill fill-slot="widget_body">
           <metal:block use-macro="here/widgets/spreadsheetwidget/macros/area_edit" />
           <metal:block use-macro="here/widgets/spreadsheetwidget/macros/area_format" />
+          <metal:block use-macro="here/widgets/spreadsheetwidget/macros/inline_menu"/>
         </metal:fill>
       </metal:use>
     </metal:define>

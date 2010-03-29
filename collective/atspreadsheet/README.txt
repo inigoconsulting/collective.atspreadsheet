@@ -61,7 +61,7 @@ basic operations like adding, updadating and deleting Spreadsheet content
 items.
 
 Adding a new Spreadsheet content item
---------------------------------
+--------------------------------------
 
 We use the 'Add new' menu to add a new content item.
 
@@ -85,7 +85,7 @@ Now we fill the form and submit it.
 And we are done! We added a new 'Spreadsheet' content item to the portal.
 
 Updating an existing Spreadsheet content item
----------------------------------------
+----------------------------------------------
 
 Let's click on the 'edit' tab and update the object attribute values.
 
@@ -101,7 +101,7 @@ We check that the changes were applied.
     True
 
 Removing a/an Spreadsheet content item
---------------------------------
+---------------------------------------
 
 If we go to the home page, we can see a tab with the 'New Spreadsheet
 Sample' title in the global navigation tabs.
@@ -131,7 +131,7 @@ Sample' tab.
     False
 
 Adding a new Spreadsheet content item as contributor
-------------------------------------------------
+-----------------------------------------------------
 
 Not only site managers are allowed to add Spreadsheet content items, but
 also site contributors.

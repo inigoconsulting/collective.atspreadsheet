@@ -6,14 +6,24 @@ var initJQSheet = function(objid,stitle,editable){
   jQuery(document).ready(function() {
     key = objid+"-jspreadsheet"
     if (!JQSHEET_ACTIVATED){
-       jQuery(key).sheet({
+      if (editable != true){
+        jQuery(key).sheet({
             title:stitle,
-            editable:editable,
+            editable:true,
+            buildSheet:true,
+            inlineMenu: jQuery('#inlineMenu').html()
+            });
+      } else {
+        jQuery(key).sheet({
+            title:stitle,
+            editable:false,
             buildSheet:true,
             });
+      };
        JQSHEET_ACTIVATED=true;
     }
   });
+
   jQuery(document).submit(function() {
      if (!JQSHEET_USE_HTML) {
         jQuery(objid).val(jS.exportSheet.html().html());

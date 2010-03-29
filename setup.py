@@ -36,7 +36,7 @@ tests_require = ['zope.testing']
 
 setup(name='collective.atspreadsheet',
       version=version,
-      description="",
+      description="Spreadsheet content type for Plone",
       long_description=long_description,
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -45,9 +45,9 @@ setup(name='collective.atspreadsheet',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         ],
-      keywords='',
-      author='',
-      author_email='',
+      keywords='spreadsheet plone content',
+      author='Izhar Firdaus',
+      author_email='izhar@inigo-tech.com',
       url='http://svn.plone.org/svn/collective/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
