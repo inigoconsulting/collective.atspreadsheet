@@ -24,6 +24,8 @@ SpreadsheetSchema = ATDocumentSchema.copy() + atapi.Schema((
 # they work well with the python bridge properties.
 
 SpreadsheetSchema['text'].widget = SpreadsheetWidget(label='Spreadsheet')
+SpreadsheetSchema['presentation'].widget.visible = {'edit':'invisible','view':'invisible'}
+SpreadsheetSchema['tableContents'].widget.visible = {'edit':'invisible','view':'invisible'}
 
 schemata.finalizeATCTSchema(SpreadsheetSchema, moveDiscussion=False)
 

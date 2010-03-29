@@ -48,10 +48,11 @@
            <table tal:attributes="title widget/label" tal:condition="content"
                tal:content="structure content">
            </table>
-           <table tal:attributes="title widget/label" tal:condition="not:content">
-             <tr tal:define="Vcount python:range(1,20)" tal:repeat="vert Vcount">
-                <td tal:define="Hcount python:range(1,10)" 
-                   tal:repeat="horiz Hcount"></td>
+           <table tal:attributes="title widget/label" tal:condition="not:content"
+                  tal:define="Vcount python:range(1,20);
+                              Hcount python:range(1,10)">
+             <tr tal:repeat="vert Vcount">
+                <td tal:repeat="horiz Hcount"></td>
              </tr>
            </table>
         </div>

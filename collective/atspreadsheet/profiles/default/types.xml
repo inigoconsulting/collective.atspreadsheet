@@ -8,6 +8,8 @@
   -->
 <object name="portal_types" meta_type="Plone Types Tool">
   <!-- -*- extra stuff goes here -*- -->
+  <object name="CSVSpreadsheet"
+    meta_type="Factory-based Type Information with dynamic views" />
   <object name="Spreadsheet"
     meta_type="Factory-based Type Information with dynamic views" />
 </object>

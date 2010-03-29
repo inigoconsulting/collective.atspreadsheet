@@ -22,6 +22,14 @@
       description=""
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+
+  <subscriber for=".interfaces.ICSVSpreadsheet
+              Products.Archetypes.interfaces.IObjectInitializedEvent"
+       handler=".subscribers.generateTable"/>
+
+  <subscriber for=".interfaces.ICSVSpreadsheet
+              Products.Archetypes.interfaces.IObjectEditedEvent"
+       handler=".subscribers.generateTable"/>
   
   <!-- -*- extra stuff goes here -*- -->
 

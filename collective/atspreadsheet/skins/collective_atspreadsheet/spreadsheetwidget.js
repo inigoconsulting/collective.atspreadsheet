@@ -16,13 +16,15 @@ var initJQSheet = function(objid,stitle,editable){
             title:stitle,
             editable:true,
             buildSheet:true,
-            inlineMenu: jQuery('#inlineMenu').html()
+            inlineMenu: jQuery('#inlineMenu').html(),
+            newColumnWidth: '200px',
             });
       } else {
         jQuery(key).sheet({
             title:stitle,
             editable:false,
             buildSheet:true,
+            newColumnWidth: '200px',
             });
       };
        JQSHEET_ACTIVATED=true;

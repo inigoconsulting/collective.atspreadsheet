@@ -6,6 +6,16 @@
   <!-- configure your content components here -->
   
   <!-- -*- extra stuff goes here -*- -->
+  <class class=".csvspreadsheet.CSVSpreadsheet">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.ICSVSpreadsheet"
+        />
+    <require
+        permission="cmf.ModifyPortalContent"
+        set_schema="..interfaces.ICSVSpreadsheet"
+        />
+  </class>
   <class class=".spreadsheet.Spreadsheet">
     <require
         permission="zope2.View"

@@ -2,6 +2,10 @@
 <rolemap>
   <permissions>
     <!-- -*- extra stuff goes here -*- -->
+    <permission name="collective.atspreadsheet: Add CSVSpreadsheet" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+    </permission>
     <permission name="collective.atspreadsheet: Add Spreadsheet" acquire="False">
       <role name="Manager" />
       <role name="Contributor" />
