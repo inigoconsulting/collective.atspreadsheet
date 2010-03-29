@@ -1,7 +1,13 @@
 Changelog
 =========
 
-1.0 (2010-03-29)
-----------------
+1.0a2 (2010-03-29)
+------------------
+
+- added image files for the JQueryUI of spreadsheet
+- added new content type : CSVSpreadsheet (displays CSV file as spreadsheet)
+
+1.0a1 (2010-03-29)
+------------------
 
 - Initial product
